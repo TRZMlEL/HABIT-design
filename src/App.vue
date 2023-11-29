@@ -4,7 +4,8 @@
       <img src="img\logo.png" alt=" " class="h-1/2 invert dark:invert-0"/>
     </header>
     <main class="bg-green-500 dark:bg-dark1 flex items-center justify-center h-5/6">
-      <label for="switch1" class="flex items-center cursor-pointer">
+      <img src="img\mainImage.png" alt=" " class="absolute z-10 w-96" />
+      <label for="switch1" class="flex items-center cursor-pointer z-20">
       <div>
         <input id="switch1" type="checkbox" class="sr-only" v-model="isChecked1" @change="isChecked2 = false"/>
         <div class="bg-transparent w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
@@ -12,7 +13,7 @@
         </div>
       </div>
     </label>
-    <label for="switch2" class="flex items-center cursor-pointer">
+    <label for="switch2" class="flex items-center cursor-pointer z-20">
       <div>
         <input id="switch2" type="checkbox" class="sr-only" v-model="isChecked2" @change="isChecked1 = false"/>
         <div class="bg-dark2 w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
