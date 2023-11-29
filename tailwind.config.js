@@ -9,8 +9,11 @@ export default {
     extend: {},
      colors: {
       'dark1' : '#39384B',
-      'dark2': '#29283A',
-      'lightBlack1' : '#080A1E'
+      'dark2' : '#29283A',
+      'darkbg' : '#29283A',
+      'light1' : '#fff',
+      'light2' : '#F5F5FB',
+      'lightBlack1' : '#080A1E',
     },
   },
   plugins: [],

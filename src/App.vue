@@ -1,26 +1,28 @@
 <template>
   <body class="w-screen h-screen " :class="isChecked1 ? 'light' : isChecked2 ? 'dark' : ''">
-    <header class="bg-green-500 dark:bg-dark1 h-1/6 flex items-center justify-center">
+    <header class="bg-green-500 bg-light1 dark:bg-darkbg h-1/6 flex items-center justify-center">
       <img src="img\logo.png" alt=" " class="h-1/2 invert dark:invert-0"/>
     </header>
-    <main class="bg-green-500 dark:bg-dark1 flex items-center justify-center h-5/6">
+    <main class="bg-green-500 dark:bg-darkbg flex items-center justify-center h-5/6">
       <img src="img\mainImage.png" alt=" " class="absolute z-10 w-96" />
-      <label for="switch1" class="flex items-center cursor-pointer z-20">
-      <div>
-        <input id="switch1" type="checkbox" class="sr-only" v-model="isChecked1" @change="isChecked2 = false"/>
-        <div class="bg-transparent w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
-          <img src="img\sunIcon.png" alt=" " class="w-1/3 invert dark:invert-0" />
-        </div>
+      <div class="bg-light2 dark:bg-dark1 z-20 flex p-10 rounded-3xl absolute right-60">
+        <label for="switch1" class="flex items-center cursor-pointer">
+          <div>
+            <input id="switch1" type="checkbox" class="sr-only" v-model="isChecked1" @change="isChecked2 = false"/>
+            <div class="bg-transparent w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
+              <img src="img\sunIcon.png" alt=" " class="w-1/3 invert dark:invert-0" />
+            </div>
+          </div>
+        </label>
+        <label for="switch2" class="flex items-center cursor-pointer">
+          <div>
+            <input id="switch2" type="checkbox" class="sr-only" v-model="isChecked2" @change="isChecked1 = false"/>
+            <div class="bg-dark2 w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
+              <img src="img\moonIcon.png" alt=" " class="w-1/3" />
+            </div>
+          </div>
+        </label>
       </div>
-    </label>
-    <label for="switch2" class="flex items-center cursor-pointer z-20">
-      <div>
-        <input id="switch2" type="checkbox" class="sr-only" v-model="isChecked2" @change="isChecked1 = false"/>
-        <div class="bg-dark2 w-14 h-20 rounded-full flex items-center justify-center border-lightBlack1 dark:border-dark2 border-2">
-          <img src="img\moonIcon.png" alt=" " class="w-1/3" />
-        </div>
-      </div>
-    </label>
     </main>
     <footer></footer>
   </body>
